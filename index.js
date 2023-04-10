@@ -31,3 +31,6 @@ function calculoImc(){
   }
 }
 
+
+document.querySelector('#botao').onclick = calculoImc;
+
