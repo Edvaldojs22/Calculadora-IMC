@@ -1,40 +1,49 @@
-  var altura = document.querySelector("#altura");
-var peso = document.querySelector("#peso");
-var mensagem = document.querySelector(".resultado")
-var mensagemAviso =document.querySelector(".mensagem-aviso")
+const altura = document.querySelector("#altura");
+const peso = document.querySelector("#peso");
+const mensagemCaculo = document.querySelector(".resultado");
+const textAviso = document.querySelector(".mensagem-aviso");
+const aparecer = document.querySelector('#container-mensagem')
+const botao = document.querySelector('#botao')
 
-function calculoImc(){
-  
-  var calculoimc = parseFloat(peso.value/ (altura.value * altura.value));
+botao.addEventListener('click',() => {
+  mostra() 
+
+  var calculoimc = parseFloat(peso.value / (altura.value * altura.value));
   var imc = calculoimc.toFixed(1);
 
-  mensagem.innerHTML=imc;
+  mensagemCaculo.textContent = imc;
 
 
-  if(imc <= 16){
-    mensagemAviso.innerHTML= (" Você está muito abaixo do peso")
+  if (imc <= 16) {
+    textAviso.textContent = (" Você está muito abaixo do peso")
   }
-  else if((imc > 16)&& (imc <= 18.49)){
-    mensagemAviso.innerHTML =("	Abaixo do peso")
-  }
-
-  else if((imc > 18.5) && (imc <= 24.99)){
-    mensagemAviso.innerHTML=(" Seu peso está normal")
+  else if ((imc > 16) && (imc <= 18.49)) {
+   textAviso.textContent = ("	Abaixo do peso")
   }
 
-  else if((imc > 25) && (imc <= 29.99)){
-    mensagemAviso.innerHTML=("Acima do peso");
+  else if ((imc > 18.5) && (imc <= 24.99)) {
+   textAviso.textContent = (" Seu peso está normal")
+  }
+
+  else if ((imc > 25) && (imc <= 29.99)) {
+   textAviso.textContent = ("Acima do peso");
   }
 
   else {
-    mensagemAviso.innerHTML=("Obesidade")
+    textAviso.textContent = ("Você esqueceu de colocar suas informações")
   }
+  
+
+ 
+  
+})
+ 
+ function mostra() {
+  aparecer.style.display = 'block'
 }
-
-
-document.querySelector('#botao').onclick = calculoImc;
-
  
 
- 
+
+
+
 
