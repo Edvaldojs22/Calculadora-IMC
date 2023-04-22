@@ -10,22 +10,27 @@
 
 <body>
   <main>
-    <div class="container">
-      <p>Calculadora IMC</p>
+    <section class="container-mensagem">
+      <div class="container-resultado">
+        <h2>IMC: </h2>
+        <div class="resultado"></div>
+      </div>
+      <div class="mensagem-aviso"></div>
+
+    </section>
+
+    <section class="container">
+
+      <h1>Calculadora IMC</h1>
       <input type="number" id="altura" placeholder="Altura">
       <input type="number" id="peso" placeholder="Peso">
-      <button  id="botao">Calcular</button>
+      <button id="botao">Calcular</button>
 
-      <div class="caixa-resultado">
-        <p>IMC :</p>
-        <div class="resultado">00.0</div>
-        <div class="mensagem-aviso"></div>
+    </section>
 
-      </div>
-    </div>
   </main>
 
-  <script src="index.js"></script>
+  <script src="calculo.js"></script>
 </body>
 
 </html>

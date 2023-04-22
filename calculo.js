@@ -1,4 +1,4 @@
-var altura = document.querySelector("#altura");
+  var altura = document.querySelector("#altura");
 var peso = document.querySelector("#peso");
 var mensagem = document.querySelector(".resultado")
 var mensagemAviso =document.querySelector(".mensagem-aviso")
@@ -33,4 +33,8 @@ function calculoImc(){
 
 
 document.querySelector('#botao').onclick = calculoImc;
+
+ 
+
+ 
 
