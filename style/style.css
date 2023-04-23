@@ -1,0 +1,17 @@
+
+@import url(caixa-mensagem.css);
+@import url(calculadora.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: rgba(59, 255, 59, 0.664);
+    display: flex;
+    justify-content: center;
+    font-family: 'Carter One', cursiva;
+  }
+  
