@@ -25,9 +25,23 @@ botao.addEventListener('click',() => {
    textAviso.textContent = (" Seu peso está normal")
   }
 
-  else if ((imc > 25) && (imc <= 29.99)) {
-   textAviso.textContent = ("Acima do peso");
+  else if ((imc > 25) && (imc < 29.99)) {
+   textAviso.textContent = ("Sobrepeso");
   }
+
+  else if ((imc > 29.99) && (imc <= 34.99)) {
+    textAviso.textContent = ("Obeso grau 1");
+  }
+
+  else if ((imc > 34.99) && (imc <= 39.9)) {
+    textAviso.textContent = ("Obeso grau 2");
+  }
+
+  else if ((imc > 39.99) || (imc < 40)) {
+    textAviso.textContent = ("Móbido");
+  }
+
+
 
   else {
     textAviso.textContent = ("Você esqueceu de colocar suas informações")
